@@ -31,6 +31,7 @@ async def pingjigia():
     print("pingjigia called")
     global server_status
     channel = client.get_channel(864328756956758017)
+    commchannel = client.get_channel(779347281744756759)
     while True:
         for i in range(5):
             logging.info("Ping To Jigi Server")
@@ -38,11 +39,18 @@ async def pingjigia():
                 host="14.36.69.97", port=25565, runs=1, timeout=2.5
             )[0]
             if packet != None:
-                print(packet)
+                logging.info(f"Packet From Jigi Server {packet}ms")
+                if server_status == False:
+                    await commchannel.send("@마인크래프트 서버 오픈")
+                    await channel.edit(name="🟢ㅣ직이섭 열림")
+                    logging.info("Jigi Server Is UP")
                 server_status = True
                 break
         else:
-            print("BUG")
+            if server_status == True:
+                await commchannel.send("@마인크래프트 서버 다운")
+                await channel.edit(name="🔴ㅣ직이섭 닫힘")
+                logging.info("Jigi Server Is DOWN")
             server_status = False
         await asyncio.sleep(10)
 
