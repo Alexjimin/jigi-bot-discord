@@ -6,8 +6,11 @@ import discord, time, threading, asyncio, os, logging
 
 timestamp = datetime.date.today()
 logpath = f"C:/Users/alexj/Documents/dev/jigibot/jigi-bot-discord/log/{timestamp}"
-if not os.path.exists(logpath):
-    f = open(logpath, "w")
+filenumber = 0
+while os.path.exists(f"{logpath}-{filenumber}.txt"):
+    filenumber += 1
+logpath = f"{logpath}-{filenumber}.txt"
+f = open(logpath, "w")
 logging.basicConfig(
     filename=logpath,
     filemode="w",
@@ -28,11 +31,11 @@ server_status = False
 
 
 async def pingjigia():
-    print("pingjigia called")
     global server_status
     channel = client.get_channel(864328756956758017)
     commchannel = client.get_channel(779347281744756759)
     while True:
+        print("pingjigia called")
         for i in range(5):
             logging.info("Ping To Jigi Server")
             packet = measure_latency(
