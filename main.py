@@ -26,12 +26,12 @@ async def pingjigia():
             if packet != None:
                 print(packet)
                 server_status = True
-                await channel.edit(name="🟢 | 직이섭 열림")
+                await channel.edit(name="🟢ㅣ직이섭 열림")
                 break
         else:
             print("BUG")
             server_status = False
-            await channel.edit(name="🔴 | 직이섭 닫힘")
+            await channel.edit(name="🔴ㅣ직이섭 닫힘")
 
         await asyncio.sleep(60)
 
