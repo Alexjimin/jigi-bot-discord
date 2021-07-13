@@ -1,5 +1,7 @@
 from tcp_latency import measure_latency
-import discord, time, threading, asyncio
+from dotenv import load_dotenv
+import discord, time, threading, asyncio, os
+
 
 client = discord.Client()
 
@@ -68,4 +70,5 @@ async def on_message(message):
         await pingjigi(message)
 
 
-client.run("ODYzNjQ4MTMwNDc4Mzc0OTQy.YOp9AA._rI0yXsi1UMZyvIwDSg-Sg1PqRk")
+load_dotenv()
+client.run(os.getenv("DISCORD_TOKEN"))
