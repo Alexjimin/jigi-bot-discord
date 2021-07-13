@@ -17,6 +17,7 @@ server_status = False
 async def pingjigia():
     global server_status
     channel = client.get_channel(864328756956758017)
+    commchannel = client.get_channel(779347281744756759)
     while True:
         print(server_status)
         for i in range(5):
@@ -25,11 +26,12 @@ async def pingjigia():
             )[0]
             if packet != None:
                 print(packet)
+                if server_status == False:
+                    await commchannel.send("@마인크래프트 서버 오픈")
                 server_status = True
                 await channel.edit(name="🟢ㅣ직이섭 열림")
                 break
         else:
-            print("BUG")
             server_status = False
             await channel.edit(name="🔴ㅣ직이섭 닫힘")
 
