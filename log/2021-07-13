@@ -69,3 +69,20 @@
 2021-07-13 15:26:33,452 - DEBUG - Dispatching event socket_response
 2021-07-13 15:26:43,464 - INFO - Ping To Jigi Server
 2021-07-13 15:26:44,471 - INFO - Packet From Jigi Server 5.62286376953125ms
+2021-07-13 15:26:54,478 - INFO - Ping To Jigi Server
+2021-07-13 15:26:55,499 - INFO - Packet From Jigi Server 15.910863876342773ms
+2021-07-13 15:27:05,504 - INFO - Ping To Jigi Server
+2021-07-13 15:27:06,515 - INFO - Packet From Jigi Server 3.9789676666259766ms
+2021-07-13 15:27:14,711 - DEBUG - Keeping shard ID None websocket alive with sequence 4.
+2021-07-13 15:27:16,523 - INFO - Ping To Jigi Server
+2021-07-13 15:27:17,537 - INFO - Packet From Jigi Server 3.990650177001953ms
+2021-07-13 15:27:17,537 - DEBUG - Dispatching event socket_raw_receive
+2021-07-13 15:27:17,537 - DEBUG - For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2021-07-13 15:27:17,537 - DEBUG - Dispatching event socket_response
+2021-07-13 15:27:27,552 - INFO - Ping To Jigi Server
+2021-07-13 15:27:28,579 - INFO - Packet From Jigi Server 15.005826950073242ms
+2021-07-13 15:27:38,590 - INFO - Received signal to terminate bot and event loop.
+2021-07-13 15:27:38,590 - INFO - Cleaning up tasks.
+2021-07-13 15:27:38,591 - INFO - Cleaning up after 2 tasks.
+2021-07-13 15:27:38,593 - INFO - All tasks finished cancelling.
+2021-07-13 15:27:38,593 - INFO - Closing the event loop.
