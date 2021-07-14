@@ -1,7 +1,9 @@
 from tcp_latency import measure_latency
 from dotenv import load_dotenv
-import datetime
+import datetime, nest_asyncio
 import discord, time, threading, asyncio, os, logging
+
+nest_asyncio.apply()
 
 
 timestamp = datetime.date.today()
